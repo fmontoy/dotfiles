@@ -5,7 +5,32 @@ set path+=**
 set noswapfile
 set wcm=<C-Z>
 set pumheight=10
-"PlugIins"
+"Plugins"
+call plug#begin()
+Plug 'mattn/emmet-vim'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+Plug 'haya14busa/is.vim'
+Plug 'haya14busa/vim-asterisk'
+Plug 'sheerun/vim-polyglot'
+Plug 'moll/vim-bbye'
+Plug 'tpope/vim-commentary'
+Plug 'michaeljsmith/vim-indent-object'
+Plug 'tpope/vim-unimpaired'
+Plug 'tpope/vim-repeat'
+Plug 'SirVer/ultisnips'
+Plug 'itchyny/lightline.vim'
+Plug 'justinmk/vim-dirvish'
+Plug 'Valloric/MatchTagAlways'
+Plug 'AndrewRadev/tagalong.vim'
+Plug 'wellle/targets.vim'
+Plug 'markonm/traces.vim'
+Plug 'dense-analysis/ale'
+Plug 'zhimsel/vim-stay'
+Plug 'voldikss/vim-floaterm'
+Plug 'tpope/vim-eunuch'
+call plug#end()
+
 set splitbelow
 set splitright
 set hidden
