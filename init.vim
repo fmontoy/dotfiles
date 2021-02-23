@@ -5,6 +5,7 @@ set path+=**
 set noswapfile
 set wcm=<C-Z>
 set pumheight=10
+
 "Plugins"
 call plug#begin()
 Plug 'mattn/emmet-vim'
@@ -18,10 +19,10 @@ Plug 'tpope/vim-commentary'
 Plug 'michaeljsmith/vim-indent-object'
 Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-repeat'
-Plug 'SirVer/ultisnips'
+" Plug 'SirVer/ultisnips'
 Plug 'itchyny/lightline.vim'
 Plug 'justinmk/vim-dirvish'
-Plug 'Valloric/MatchTagAlways'
+"Plug 'Valloric/MatchTagAlways'
 Plug 'AndrewRadev/tagalong.vim'
 Plug 'wellle/targets.vim'
 Plug 'markonm/traces.vim'
@@ -29,6 +30,8 @@ Plug 'dense-analysis/ale'
 Plug 'zhimsel/vim-stay'
 Plug 'voldikss/vim-floaterm'
 Plug 'tpope/vim-eunuch'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'preservim/nerdtree'
 call plug#end()
 
 set splitbelow
@@ -58,9 +61,17 @@ syntax enable
 
 "Mapping"
 let mapleader=" "
+let g:user_emmet_leader_key=','
+let g:floaterm_autoclose = 1
 nnoremap <leader>s :source ~/.config/nvim/init.vim<cr>
 nnoremap <leader>rh :noh<cr>
 nnoremap <leader>w :w<cr>
 nnoremap <leader>ie :vs ~/.config/nvim/init.vim<cr>
 nnoremap Y y$
-nnoremap <C-f> /
+nnoremap <leader>q :q!<cr>
+nnoremap <leader>t :FloatermToggle<cr>
+vnoremap <leader>sw :sort<cr>
+
+" Fuzzy Finder Config
+nnoremap <C-p> :GFiles<cr> 
+nnoremap <leader>rg :Rg<cr>
